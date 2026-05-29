@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appmentary Software Solutions – Contact Us</title>
+  <title>RMinder App – Smart Reminder Companion</title>
 
   <!-- Security Meta Tags -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
@@ -15,14 +15,7 @@
   <!-- Example server header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      padding-bottom: 60px; /* space for fixed footer */
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; padding-bottom: 60px; }
 
     /* Company Header */
     .tm-site-header {
@@ -77,19 +70,23 @@
       box-shadow: 0 0 8px #4db8ff;
     }
 
-    /* Contact Section */
-    section.contact {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
+    /* RMinder Section */
+    header.rminder-header {
+      background: #0073e6;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
     }
-    section.contact h2 {
-      color: #0073e6;
-      margin-bottom: 20px;
-    }
-    section.contact p {
-      line-height: 1.6;
-    }
+    header.rminder-header h1 { margin: 0; font-size: 2em; }
+    section { padding: 40px; max-width: 900px; margin: auto; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .cta { text-align: center; margin-top: 40px; }
+    .cta a { display: inline-block; margin: 10px; background: #0073e6; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; }
+    .cta a:hover { background: #005bb5; }
+    .product-media { text-align: center; margin: 40px 0; }
+    .product-media img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    iframe { width: 100%; height: 400px; border: none; border-radius: 8px; }
 
     /* Fixed Footer */
     footer {
@@ -125,23 +122,57 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="team.html">Our Team</a></li>
-        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>
-      We’d love to hear from you. Whether you have questions about our software solutions, need support, or want to explore how Appmentary Software Solutions can help your business, our team is ready to assist.
-    </p>
-    <p>
-      📧 Email us directly at: <b>contact@appmentarysoftsolutions.shop</b>
-    </p>
-    <p>
-      Once we receive your message, our team will review it and get back to you within 24 hours. Your time matters, and we’re committed to providing quick, helpful responses.
-    </p>
+  <!-- RMinder App Section -->
+  <header class="rminder-header">
+    <h1>RMinder App – Your Smart Reminder Companion</h1>
+    <p>Never miss a deadline again</p>
+  </header>
+
+  <section>
+    <div class="product-media">
+      <h2>📸 Product Preview</h2>
+      <img src="img/image-01-Preview1.png" alt="RMinder App Screenshot">
+    </div>
+
+    <div class="product-media">
+      <h2>🎥 Watch RMinder App in Action</h2>
+      <iframe src="https://www.youtube.com/embed/9cb2TPCXj18" allowfullscreen></iframe>
+    </div>
+
+    <h2>✨ Key Features</h2>
+    <div class="features">
+      <div class="feature"><strong>Smart Scheduling</strong><br>Organize tasks and deadlines with ease.</div>
+      <div class="feature"><strong>Windows Ready</strong><br>Fully optimized for Windows, making setup effortless and performance consistent.</div>
+      <div class="feature"><strong>Lifetime Updates</strong><br>One‑time payment, free updates forever.</div>
+      <div class="feature"><strong>Secure & Reliable</strong><br>Built with stability and trust in mind.</div>
+    </div>
+
+    <h2>💡 Why Choose RMinder?</h2>
+    <ul>
+      <li>Save time by automating reminders</li>
+      <li>Reduce stress with reliable notifications</li>
+      <li>Perfect for compliance teams, freelancers, and businesses</li>
+      <li>Affordable one‑time purchase — no subscriptions</li>
+    </ul>
+
+    <h2>💰 Pricing</h2>
+    <p><strong>ONLY $99.00 – One‑Time Payment</strong><br>Includes lifetime free updates and support.</p>
+
+    <div class="cta">
+      <h2>Buy RMinder App</h2>
+      <a href="https://gumroad.com/your-product-link">Buy on Gumroad</a>
+      <a href="https://www.digistore24.com/product-link">Buy on Digistore24</a>
+      <a href="https://jvzoo.com/product-link">Buy on JVZoo</a>
+    </div>
+
+    <h2>🤝 Affiliate Program</h2>
+    <p>Earn <strong>60% commission per sale</strong> by promoting RMinder App.<br>
+    Affiliates can join through Gumroad, Digistore24, or JVZoo depending on their preferred platform.</p>
   </section>
 
   <!-- Footer -->

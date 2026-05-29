@@ -1,112 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appmentary Software Solutions – Our Team</title>
 
-    <title>Appmentary Software Solutions</title>
+  <!-- Security Meta Tags -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+  <!-- Strict-Transport-Security (HSTS) must be set via server headers, not meta tags -->
+  <!-- Example server header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
 
-    <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/tooplate-style.css">                                   <!-- Templatemo style -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      padding-bottom: 60px; /* space for fixed footer */
+    }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-          <![endif]-->
+    /* Company Header */
+    .tm-site-header {
+      background: #0a1a2f url('img/header-01.jpg') no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .tm-site-name {
+      font-size: 2.6em;
+      margin: 0;
+      color: #4db8ff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .tm-site-description {
+      font-size: 1.2em;
+      color: #a8c6e3;
+      margin-top: 10px;
+    }
+
+    /* Responsive Attractive Menu */
+    nav {
+      background-color: rgba(0,0,0,0.8);
+      padding: 15px 0;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    nav li { margin: 0; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #4db8ff;
+      color: #0a1a2f;
+      box-shadow: 0 0 8px #4db8ff;
+    }
+
+    /* Team Section */
+    .tm-main-content {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .tm-main-title {
+      color: #0073e6;
+      margin-bottom: 20px;
+    }
+    .team-intro {
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .team-member {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .team-member i {
+      font-size: 3em;
+      color: #0073e6;
+      margin-bottom: 15px;
+    }
+    .team-member h3 {
+      color: #0073e6;
+      margin-bottom: 10px;
+    }
+
+    /* Fixed Footer */
+    footer {
+      background: #0a1a2f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95em;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .tm-current-year {
+      color: #fff; /* same as footer text, not bold */
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      .tm-site-name { font-size: 2em; }
+      nav ul { gap: 20px; }
+      nav a { font-size: 1em; padding: 6px 12px; }
+      body { padding-bottom: 80px; }
+    }
+  </style>
 </head>
+<body>
+  <!-- Company Header -->
+  <header class="tm-site-header">
+    <h1 class="tm-site-name">Appmentary Software Solutions</h1>
+    <p class="tm-site-description">Reliable solutions, simplified</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html" class="active">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <body>
-        
-        <div class="container">
-            <header class="tm-site-header">
-                <h1 class="tm-site-name">Appmentary Software Solutions</h1>
-                <p class="tm-site-description">Reliable solutions, simplified</p>
-                
-                <nav class="navbar navbar-expand-md tm-main-nav-container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmMainNav" aria-controls="tmMainNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fa fa-bars"></i>
-                    </button>
+  <!-- Team Section -->
+  <div class="tm-main-content">
+    <h2 class="tm-main-title">Our Team</h2>
+    <p class="team-intro">
+      At Appmentary Software Solutions, we’re just beginning our journey in the software solutions market — but we’re driven by a clear mission: delivering efficiency, flexibility, and innovative applications that help people and businesses thrive in today’s technology era.
+      <br><br>
+      We may be new, but we’re growing day by day. Our team is steadily expanding with developers and innovators who share our vision. As client needs evolve, we’re building the right mix of talent and expertise to meet demands head‑on and provide solutions that truly make a difference.
+      <br><br>
+      Appmentary Software Solutions is more than a software showcasing platform — it’s a community of passionate professionals committed to shaping the future of digital solutions, one project at a time and bringing simplicity of software to all.
+    </p>
 
-                    <div class="collapse navbar-collapse tm-main-nav" id="tmMainNav">
-                        <ul class="nav nav-fill tm-main-nav-ul">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="team.html">Our Team</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                
-            </header>
+    <div class="team-grid">
+      <div class="team-member">
+        <i class="fa fa-users"></i>
+        <h3>Leadership</h3>
+        <p>Our leadership team brings years of experience in IT service management, product development, and client success. They set the vision and ensure every solution we build aligns with our values of innovation and adaptability.</p>
+      </div>
+      <div class="team-member">
+        <i class="fa fa-code"></i>
+        <h3>Developers</h3>
+        <p>Our developers specialize in .NET, C#, and modern API integrations. They are dedicated to transforming ideas into scalable, secure, and high‑performance applications that meet real‑world personal and business demands.</p>
+      </div>
+      <div class="team-member">
+        <i class="fa fa-headphones"></i>
+        <h3>Support & Success</h3>
+        <p>We believe technology should be accessible and reliable. Our support team ensures smooth onboarding, responsive assistance, and long‑term client satisfaction.</p>
+      </div>
+    </div>
+  </div>
 
-            
-            <div class="tm-main-content">                    
-                <section class="row tm-item-preview tm-margin-b-xl">
-                    <div class="col-12">
-                        <h2 class="tm-blue-text tm-margin-b-p">Our Team</h2>
-                    </div>
-                    <div class="col-md-12 col-sm-12 mb-md-0 mb-5">         
-                        <div class="mr-lg-5">
-                            <p>At Appmentary Software Solutions, we’re just beginning our journey in the software solutions market — but we’re driven by a clear mission: delivering efficiency, flexibility, and innovative applications that help people and businesses thrive in today’s technology era.
+  <!-- Footer -->
+  <footer>
+    Copyright &copy; 2025 -
+    <span class="tm-current-year">2018</span>
+    Appmentary Software Solutions
+  </footer>
 
-We may be new, but we’re growing day by day. Our team is steadily expanding with developers, and innovators who share our vision. As client needs evolve, we’re building the right mix of talent and expertise to meet demands head‑on and provide solutions that truly make a difference.
-
-Appmentary Software Solutions is more than a software showcasing platform — it’s a community of passionate professionals committed to shaping the future of digital solutions, one project at a time and bringing simplicity of software to all.</p>
-                                                    
-                        </div>                                       
-                    </div>
-                                  </section>
-
-                <div class="row tm-margin-b-ll">
-                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
-                        <div class="text-center tm-margin-b-30"><i class="fa tm-fa-6x fa-linode tm-blue-text"></i></div>
-                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">Leadership</h3></header>
-                        <p>Our leadership team brings years of experience in IT service management, product development, and client success. They set the vision and ensure every solution we build aligns with our values of innovation and adaptability.</p>
-                    </article>
-                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
-                        <div class="text-center tm-margin-b-30"><i class="fa tm-fa-6x fa-telegram tm-blue-text"></i></div>
-                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">Developers</h3></header>
-                        <p>Our developers specialize in .NET, C#, and modern API integrations. They are dedicated to transforming ideas into scalable, secure, and high‑performance applications that meet real‑world personal and business demands.</p>
-                    </article>
-                    <article class="col-12 col-sm-12 col-md-4 col-lg-4 mb-md-0 mb-5">
-                        <div class="text-center tm-margin-b-30"><i class="fa tm-fa-6x fa-superpowers tm-blue-text"></i></div>
-                        <header class="tm-margin-b-30"><h3 class="tm-blue-text tm-h3">Support and Success</h3></header>
-                        <p>We believe technology should be accessible and reliable. Our support team ensures smooth onboarding, responsive assistance, and long‑term client satisfaction.</p>
-                    </article>
-                 </div>
-
-              
-                            
-            </div>
-
-               <footer>
-
-                Copyright &copy; 2025 - <span class="tm-current-year">2018</span> Appmentary Software Solutions
-                
-            </footer>    
-
-
-        </div>
-        
-        <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/) -->
-        <script src="js/popper.min.js"></script>                <!-- Popper (https://popper.js.org/) -->
-        <script src="js/bootstrap.min.js"></script>             <!-- Bootstrap (https://getbootstrap.com/) -->
-        <script>     
-       
-            $(document).ready(function(){
-                
-                // Update the current year in copyright
-                $('.tm-current-year').text(new Date().getFullYear());
-
-            });
-
-        </script>             
-
+  <script>
+    // Update footer year dynamically
+    document.querySelector('.tm-current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

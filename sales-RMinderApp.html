@@ -7,9 +7,10 @@
   <title>RMinder App – Smart Reminder Companion</title>
 
   <!-- Security Meta Tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; img-src 'self' https:; script-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
   <!-- Strict-Transport-Security (HSTS) must be set via server headers, not meta tags -->
   <!-- Example server header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
@@ -141,7 +142,9 @@
 
     <div class="product-media">
       <h2>🎥 Watch RMinder App in Action</h2>
-      <iframe src="https://www.youtube.com/embed/9cb2TPCXj18" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/9cb2TPCXj18" 
+        allowfullscreen 
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
 
     <h2>✨ Key Features</h2>

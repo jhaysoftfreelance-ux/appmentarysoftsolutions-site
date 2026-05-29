@@ -11,8 +11,6 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
-  <!-- Strict-Transport-Security (HSTS) must be set via server headers, not meta tags -->
-  <!-- Example server header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
 
   <style>
     body {
@@ -31,6 +29,24 @@
       text-align: center;
       padding: 40px 20px;
     }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .company-logo {
+      height: 80px; /* adjust size as needed */
+      width: auto;
+    }
+
+    .company-text {
+      text-align: left;
+    }
+
     .tm-site-name {
       font-size: 2.6em;
       margin: 0;
@@ -38,6 +54,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
+
     .tm-site-description {
       font-size: 1.2em;
       color: #a8c6e3;
@@ -157,14 +174,21 @@
       nav ul { gap: 20px; }
       nav a { font-size: 1em; padding: 6px 12px; }
       body { padding-bottom: 80px; }
+      .logo-container { flex-direction: column; }
+      .company-text { text-align: center; }
     }
   </style>
 </head>
 <body>
   <!-- Company Header -->
   <header class="tm-site-header">
-    <h1 class="tm-site-name">Appmentary Software Solutions</h1>
-    <p class="tm-site-description">Reliable solutions, simplified</p>
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Appmentary Logo" class="company-logo">
+      <div class="company-text">
+        <h1 class="tm-site-name">Appmentary Software Solutions</h1>
+        <p class="tm-site-description">Reliable solutions, simplified</p>
+      </div>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -189,27 +213,12 @@
     <section>
       <h2 class="tm-main-title">Our Products</h2>
       <div class="tm-gallery">
-        <!-- Dummy Product 1 -->
         <div class="tm-gallery-item">
           <a href="sales-RMinderApp.html">
-            <img src="img/image-01.png" alt="Dummy Product 1">
+            <img src="img/image-01.png" alt="RMinder App">
             <p class="tm-figcaption">RMinder App</p>
           </a>
         </div>
-        <!-- Dummy Product 2 -->
-        <!-- <div class="tm-gallery-item"> -->
-          <!-- <a href="preview_2.html"> -->
-            <!-- <img src="img/dummy-product-2.png" alt="Dummy Product 2"> -->
-            <!-- <p class="tm-figcaption">Dummy Product 2</p> -->
-          <!-- </a> -->
-        <!-- </div> -->
-        <!-- Dummy Product 3 -->
-        <!-- <div class="tm-gallery-item"> -->
-          <!-- <a href="preview_3.html"> -->
-            <!-- <img src="img/dummy-product-3.png" alt="Dummy Product 3"> -->
-            <!-- <p class="tm-figcaption">Dummy Product 3</p> -->
-          <!-- </a> -->
-        <!-- </div> -->
       </div>
     </section>
 
@@ -232,9 +241,7 @@
     Appmentary Software Solutions
   </footer>
 
-  <script>
-    // Update footer year dynamically
-    document.querySelector('.tm-current-year').textContent = new Date().getFullYear();
-  </script>
+<script src="js/year.js"></script>
+
 </body>
 </html>

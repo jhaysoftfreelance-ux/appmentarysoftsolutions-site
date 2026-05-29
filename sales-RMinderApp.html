@@ -8,12 +8,10 @@
 
   <!-- Security Meta Tags -->
   <meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; img-src 'self' https:; script-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+        content="default-src 'self'; img-src 'self' https:; script-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
-  <!-- Strict-Transport-Security (HSTS) must be set via server headers, not meta tags -->
-  <!-- Example server header: Strict-Transport-Security: max-age=31536000; includeSubDomains; preload -->
 
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; padding-bottom: 60px; }
@@ -25,6 +23,24 @@
       text-align: center;
       padding: 40px 20px;
     }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .company-logo {
+      height: 80px; /* adjust size as needed */
+      width: auto;
+    }
+
+    .company-text {
+      text-align: left;
+    }
+
     .tm-site-name {
       font-size: 2.6em;
       margin: 0;
@@ -32,6 +48,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
+
     .tm-site-description {
       font-size: 1.2em;
       color: #a8c6e3;
@@ -111,14 +128,21 @@
       nav ul { gap: 20px; }
       nav a { font-size: 1em; padding: 6px 12px; }
       body { padding-bottom: 80px; }
+      .logo-container { flex-direction: column; }
+      .company-text { text-align: center; }
     }
   </style>
 </head>
 <body>
   <!-- Company Header -->
   <header class="tm-site-header">
-    <h1 class="tm-site-name">Appmentary Software Solutions</h1>
-    <p class="tm-site-description">Reliable solutions, simplified</p>
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Appmentary Logo" class="company-logo">
+      <div class="company-text">
+        <h1 class="tm-site-name">Appmentary Software Solutions</h1>
+        <p class="tm-site-description">Reliable solutions, simplified</p>
+      </div>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -143,8 +167,8 @@
     <div class="product-media">
       <h2>🎥 Watch RMinder App in Action</h2>
       <iframe src="https://www.youtube-nocookie.com/embed/9cb2TPCXj18" 
-        allowfullscreen 
-        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              allowfullscreen 
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
 
     <h2>✨ Key Features</h2>
@@ -176,18 +200,3 @@
     <h2>🤝 Affiliate Program</h2>
     <p>Earn <strong>60% commission per sale</strong> by promoting RMinder App.<br>
     Affiliates can join through Gumroad, Digistore24, or JVZoo depending on their preferred platform.</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    Copyright &copy; 2025 -
-    <span class="tm-current-year">2018</span>
-    Appmentary Software Solutions
-  </footer>
-
-  <script>
-    // Update footer year dynamically
-    document.querySelector('.tm-current-year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>

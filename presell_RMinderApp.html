@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMinder App – Pre‑Release</title>
+
+  <!-- Security Meta Tags -->
+  <!-- <meta http-equiv="Content-Security-Policy"  -->
+        <!-- content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline'; frame-src https:;"> -->
+		
+	<!-- <meta http-equiv="Content-Security-Policy"  -->
+      <!-- content="default-src 'self'; -->
+               <!-- img-src 'self' https:; -->
+               <!-- script-src 'self'; -->
+               <!-- style-src 'self' 'unsafe-inline'; -->
+               <!-- frame-src https:; -->
+               <!-- connect-src 'self' https://script.google.com;">	 -->
+	
+
+	<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               img-src 'self' https:;
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               frame-src https:;
+               connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
+
+  
+  
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; padding-bottom: 60px; }
+
+    /* Company Header */
+    .tm-site-header {
+      background: #0a1a2f url('img/header-01.jpg') no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .logo-container { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .company-logo { height: 80px; width: auto; }
+    .company-text { text-align: left; }
+    .tm-site-name { font-size: 2.6em; margin: 0; color: #4db8ff; letter-spacing: 2px; text-transform: uppercase; }
+    .tm-site-description { font-size: 1.2em; color: #a8c6e3; margin-top: 10px; }
+
+    /* Menu */
+    nav { background-color: rgba(0,0,0,0.8); padding: 15px 0; margin-top: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; font-size: 1.1em; font-weight: bold; padding: 8px 16px; border-radius: 6px; transition: all 0.3s ease; }
+    nav a:hover { background-color: #4db8ff; color: #0a1a2f; box-shadow: 0 0 8px #4db8ff; }
+
+    /* Pre‑release Section */
+    header.rminder-header { background: #0073e6; color: #fff; padding: 25px; text-align: center; }
+    header.rminder-header h1 { margin: 0; font-size: 2em; }
+    section { padding: 40px; max-width: 900px; margin: auto; }
+    .cta { text-align: center; margin: 30px 0; }
+    .cta a { display: inline-block; margin: 10px; background: #0073e6; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 18px; }
+    .cta a:hover { background: #005bb5; }
+    .product-media { text-align: center; margin: 40px 0; }
+    .product-media img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .countdown { font-size: 1.5em; color: #0073e6; text-align: center; margin: 20px 0; }
+
+    /* Footer */
+    footer { background: #0a1a2f; color: #fff; text-align: center; padding: 20px; font-size: 0.95em; position: fixed; bottom: 0; left: 0; width: 100%; }
+    .tm-current-year { color: #fff; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .tm-site-name { font-size: 2em; }
+      nav ul { gap: 20px; }
+      nav a { font-size: 1em; padding: 6px 12px; }
+      body { padding-bottom: 80px; }
+      .logo-container { flex-direction: column; }
+      .company-text { text-align: center; }
+    }
+	
+	/* Style the email input */
+#notifyForm input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #4CAF50;   /* green border */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#notifyForm input[type="email"]:focus {
+  border-color: #2e7d32;        /* darker green on focus */
+}
+
+/* Style the button */
+#notifyForm button {
+  background-color: #4CAF50;    /* green background */
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#notifyForm button:hover {
+  background-color: #45a049;    /* slightly darker on hover */
+}
+
+	
+  </style>
+</head>
+<body>
+  <!-- Header -->
+   <header class="tm-site-header">
+     <div class="logo-container"> 
+       <img src="img/logo.png" alt="Appmentary Logo" class="company-logo"> 
+       <div class="company-text"> 
+         <h1 class="tm-site-name">Appmentary Software Solutions</h1> 
+         <p class="tm-site-description">Reliable solutions, simplified</p> 
+       </div> 
+     </div> 
+    <!-- <nav> -->
+      <!-- <ul> -->
+        <!-- <li><a href="index.html">Home</a></li> -->
+        <!-- <li><a href="team.html">Our Team</a></li> -->
+        <!-- <li><a href="contact.html">Contact Us</a></li> -->
+      <!-- </ul> -->
+    <!-- </nav> -->
+   </header>
+
+  <!-- Pre‑release Section -->
+  <header class="rminder-header">
+    <h1>RMinder App — Smart Reminders for Busy Professionals</h1>
+    <p>Launching soon on JVZoo!</p>
+  </header>
+
+  <section>
+    <p>RMinder helps busy professionals stay on top of tasks with intelligent reminders and seamless scheduling.</p>
+
+    <div class="countdown">Official Launch: June 01, 2026</div>
+    <!-- Optional countdown script can be added here -->
+
+   
+
+    <h2>Affiliate Commission Details</h2>
+    <p>Join as an Affiliate — <strong>Earn 60% Commission!</strong>
+Promote RMinder App and enjoy a straightforward, high‑converting offer.
+Every sale you drive earns you 60% — simple, transparent, and rewarding.
+Sign up today and start earning big!
+</p>
+ <div class="cta">
+      <a href="https://www.jvzoo.com/affiliate-signup-link">Join as an Affiliate — Earn 60% Commission!</a>
+    </div>
+    <div class="product-media">
+      <img src="img/logo.png" alt="RMinder Logo Placeholder">
+      <h3>🚀 Coming Soon</h3>
+    </div>
+
+   <h2>Get Notified</h2>
+<form id="notifyForm">
+  <label for="email">Enter your email to get notified:</label><br>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  <button type="submit">Notify Me</button>
+</form>
+
+<p id="responseMessage" style="font-weight: bold;"></p>
+
+<!-- External JS reference -->
+<script src="js/notify.js"></script>
+
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Copyright &copy; 2025 -
+    <span class="tm-current-year">2018</span>
+    Appmentary Software Solutions
+  </footer>
+
+  <script src="js/year.js"></script>
+</body>
+</html>

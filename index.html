@@ -7,7 +7,13 @@
   <title>Appmentary Software Solutions – Home</title>
 
   <!-- Security Meta Tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               img-src 'self' https:;
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               frame-src https:;
+               connect-src 'self' https://script.google.com https://script.googleusercontent.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
@@ -177,6 +183,59 @@
       .logo-container { flex-direction: column; }
       .company-text { text-align: center; }
     }
+	
+	
+	
+	/* Style the email input */
+#notifyForm input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #4CAF50;   /* green border */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#notifyForm input[type="email"]:focus {
+  border-color: #2e7d32;        /* darker green on focus */
+}
+
+/* Style the button */
+#notifyForm button {
+  background-color: #4CAF50;    /* green background */
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#notifyForm button:hover {
+  background-color: #45a049;    /* slightly darker on hover */
+}
+
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;              /* center on page */
+  padding: 20px;
+  background: #f9f9f9;         /* light background */
+  border: 2px solid #4CAF50;   /* green border */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+	
+	
   </style>
 </head>
 <body>
@@ -227,6 +286,21 @@
         <i class="fa fa-life-ring"></i>
       </div>
       <div>
+	   <h2>Want to be the first to be Notified?</h2>
+	   
+<form id="notifyForm">
+  <label for="email">Enter your email to get notified when we release new solution products on our website:</label><br /><br />
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  <button type="submit">Notify Me</button>
+</form>
+
+<p id="responseMessage" style="font-weight: bold;"></p>
+
+
+
+
+
+	  
         <h2>Need Help?</h2>
         <p>Please contact us and we will be in touch with you.</p>
         <a href="contact.html" class="tm-white-bordered-btn">Contact Us</a>
@@ -240,7 +314,8 @@
     <span class="tm-current-year">2018</span>
     Appmentary Software Solutions
   </footer>
-
+<!-- External JS reference -->
+<script src="js/notify.js"></script>
 <script src="js/year.js"></script>
 
 </body>
